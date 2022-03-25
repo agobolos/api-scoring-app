@@ -47,7 +47,7 @@
         }
     ],
 
-    "paramsPythonSetup": "get_available_images.py",
+/*    "paramsPythonSetup": "get_available_images.py",
     "params": [
          {
             "type": "SELECT",
@@ -55,7 +55,7 @@
             "getChoicesFromPython": true
          }
     ],
-    
+  */  
     /* roles define where this webapp will appear in DSS GUI. They are used to pre-fill a macro parameter with context.
 
        Each role consists of:
