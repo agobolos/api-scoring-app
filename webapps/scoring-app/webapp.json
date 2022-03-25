@@ -22,6 +22,7 @@
 
        For the full list and for more details, see the documentation: https://doc.dataiku.com/dss/latest/plugins/reference/params.html
     */
+    "paramsPythonSetup": "get_available_images.py",
     "params": [
         {
             "name": "input_dataset",
@@ -45,18 +46,23 @@
             "description": "",
             "mandatory": true
         },
-
-    ],
-
-    "paramsPythonSetup": "get_available_images.py",
-    "params": [
         {
             "name": "banner_image",
             "type": "SELECT",
             "label": "banner_img",
             "getChoicesFromPython": true
         }
+
     ],
+
+/*    "params": [
+        {
+            "name": "banner_image",
+            "type": "SELECT",
+            "label": "banner_img",
+            "getChoicesFromPython": true
+        }
+    ],*/
  
     /* roles define where this webapp will appear in DSS GUI. They are used to pre-fill a macro parameter with context.
 
