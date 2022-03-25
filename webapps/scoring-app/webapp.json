@@ -33,7 +33,7 @@
         },
         {
             "name": "included_columns",
-            "type": "COLUMNS",
+            "type": "DATASET_COLUMN",
             //"columnRole": "input_dataset",
             "datasetParamName": "input_dataset",
             "label": "Columns",
