@@ -34,6 +34,7 @@
             "name": "included_columns",
             "type": "COLUMNS",
             "datasetParamName": "input_dataset",
+            "columnRole": "input_dataset",
             "label": "Columns",
             "description": "Select columns to use",
             "mandatory": true
