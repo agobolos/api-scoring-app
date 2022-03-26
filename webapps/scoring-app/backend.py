@@ -78,7 +78,7 @@ client=dataikuapi.APINodeClient(api_address,api_service)
 # print(test)
 
 # import dataset
-dataset=dataiku.Dataset(plugin_conf["input_dataset"])
+dataset=dataiku.Dataset(get_plugin_config["input_dataset"])
 df=dataset.get_dataframe()
 
 df=df.keep(columns=keep_fields)
