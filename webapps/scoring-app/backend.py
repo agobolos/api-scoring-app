@@ -30,20 +30,20 @@ import os
 
 # keep_fields=['customer_id','ip','ip_geopoint']
 
-# header_img="https://www.dataiku.com/wp-content/uploads/2021/02/Dataiku-new-logo-teal.svg"
-# right_img="/local/static/images/webapps/How-to-make-Customer-value-proposition.jpeg"
+header_img="https://www.dataiku.com/wp-content/uploads/2021/02/Dataiku-new-logo-teal.svg"
+right_img="/local/static/images/webapps/How-to-make-Customer-value-proposition.jpeg"
 
 #client = dataikuapi.APINodeClient("http://localhost:20300", "CLV_Project")
 #model_endpoint="High_Revenue_Customers"
 
 text_on_button="Predict!"
-# pred_false_pic='/local/static/images/webapps/Rejected-Stamp-PNG-Clipart.png'
-# pred_true_pic='/local/static/images/webapps/approved-icon.png'
+pred_false_pic='/local/static/images/webapps/Rejected-Stamp-PNG-Clipart.png'
+pred_true_pic='/local/static/images/webapps/approved-icon.png'
 
 #--------------------------------------------------------------------------------------
 
-# max_categories=150
-# max_slider=100
+max_categories=150
+max_slider=100
 
 #--------------------------------------------------------------------------------------
 
@@ -53,32 +53,32 @@ text_on_button="Predict!"
 # var_list=dataiku.get_custom_variables()
 keep_fields=get_plugin_config()['included_columns']
 
-header_img=get_plugin_config()['header_img']
-right_img=get_plugin_config()['right_image']
-pred_true_pic=get_plugin_config()['true_image']
-pred_false_pic=get_plugin_config()['false_image']
+#header_img=get_plugin_config()['header_img']
+#right_img=get_plugin_config()['right_image']
+#pred_true_pic=get_plugin_config()['true_image']
+#pred_false_pic=get_plugin_config()['false_image']
 
-max_categories=get_plugin_config()['max_categories']
-max_slider=get_plugin_config()['max_slider']
+#max_categories=get_plugin_config()['max_categories']
+#max_slider=get_plugin_config()['max_slider']
 
 # api_node=var_list["api_node_address"]
 # api_project=var_list["api_project"]
 # model_endpoint=var_list["api_model_endpoint"]
 
-api_node=get_plugin_config()['api_address']
-api_project=get_plugin_config()['api_service']
-model_endpoint=get_plugin_config()['api_endpoint']
+#api_node=get_plugin_config()['api_address']
+#api_project=get_plugin_config()['api_service']
+#model_endpoint=get_plugin_config()['api_endpoint']
 
-# client = dataikuapi.APINodeClient("http://localhost:20300", "CLV_Project")
+client = dataikuapi.APINodeClient("http://localhost:20300", "CLV_Project")
 
-client=dataikuapi.APINodeClient(api_address,api_service)
+#client=dataikuapi.APINodeClient(api_address,api_service)
 
 # path=str(dataiku.get_custom_variables()["dip.home"])+"/local/static/images/webapps"
 # test=os.listdir(path) # returns list
 # print(test)
 
 # import dataset
-dataset=dataiku.Dataset(get_plugin_config["input_dataset"])
+dataset=dataiku.Dataset(get_plugin_config['input_dataset'])
 df=dataset.get_dataframe()
 
 df=df.keep(columns=keep_fields)
