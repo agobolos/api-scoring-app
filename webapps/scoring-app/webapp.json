@@ -61,7 +61,7 @@
             "mandatory": true
         },
         {
-            "name": "banner_image",
+            "name": "header_img",
             "type": "SELECT",
             "label": "Banner Image",
             "getChoicesFromPython": true
