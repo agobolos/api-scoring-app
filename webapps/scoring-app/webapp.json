@@ -41,17 +41,44 @@
             "mandatory": true
         },
         {
-            "name": "input_int",
-            "type": "INT",
-            "label": "Int",
-            "description": "",
-            "mandatory": true
-        },
-        {
             "name": "banner_image",
             "type": "SELECT",
-            "label": "banner_img",
+            "label": "Banner Image",
             "getChoicesFromPython": true
+        },
+        {
+            "name": "right_image",
+            "type": "SELECT",
+            "label": "Right Image",
+            "getChoicesFromPython": true
+        },
+        {
+            "name": "true_image",
+            "type": "SELECT",
+            "label": "True Image",
+            "getChoicesFromPython": true
+        },
+        {
+            "name": "false_image",
+            "type": "SELECT",
+            "label": "False Image",
+            "getChoicesFromPython": true
+        },
+        {
+            "name": "max_categories",
+            "type": "INT",
+            "label": "Max Categories",
+            "description": "Maximum number of values for category select",
+            "mandatory": true,
+            "defaultValue": 150
+        },
+        {
+            "name": "max_slider",
+            "type": "INT",
+            "label": "Max Slider",
+            "description": "Maximum number of values for slider",
+            "mandatory": true,
+            "defaultValue": 100
         }
 
     ],
