@@ -57,6 +57,9 @@ right_img=plugin_conf["right_image"]
 pred_true_pic=plugin_conf["true_image"]
 pred_false_pic=plugin_conf["false_image"]
 
+max_categories=plugin_conf["max_categories"]
+max_slider=plugin_conf["max_slider"]
+
 # api_node=var_list["api_node_address"]
 # api_project=var_list["api_project"]
 # model_endpoint=var_list["api_model_endpoint"]
