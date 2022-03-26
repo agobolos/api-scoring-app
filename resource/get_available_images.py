@@ -8,6 +8,6 @@ def do(payload, config, plugin_config, inputs):
   choices={}
     
   for img in img_list:
-    choices[img]=img;
+    choices[img]=img
     
   return {"choices": choices}
