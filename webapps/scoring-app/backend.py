@@ -51,23 +51,23 @@ text_on_button="Predict!"
 
 # import variables
 # var_list=dataiku.get_custom_variables()
-keep_fields=get_recipe_config()["included_columns"]
+keep_fields=get_plugin_config()["included_columns"]
 
-header_img=get_recipe_config()["header_img"]
-right_img=get_recipe_config()["right_image"]
-pred_true_pic=get_recipe_config()["true_image"]
-pred_false_pic=get_recipe_config()["false_image"]
+header_img=get_plugin_config()["header_img"]
+right_img=get_plugin_config()["right_image"]
+pred_true_pic=get_plugin_config()["true_image"]
+pred_false_pic=get_plugin_config()["false_image"]
 
-max_categories=get_recipe_config()["max_categories"]
-max_slider=get_recipe_config()["max_slider"]
+max_categories=get_plugin_config()["max_categories"]
+max_slider=get_plugin_config()["max_slider"]
 
 # api_node=var_list["api_node_address"]
 # api_project=var_list["api_project"]
 # model_endpoint=var_list["api_model_endpoint"]
 
-api_node=get_recipe_config()["api_address"]
-api_project=get_recipe_config()["api_service"]
-model_endpoint=get_recipe_config()["api_endpoint"]
+api_node=get_plugin_config()["api_address"]
+api_project=get_plugin_config()["api_service"]
+model_endpoint=get_plugin_config()["api_endpoint"]
 
 # client = dataikuapi.APINodeClient("http://localhost:20300", "CLV_Project")
 
