@@ -48,7 +48,7 @@ text_on_button="Predict!"
 #--------------------------------------------------------------------------------------
 
 # import plugin config
-plugin_conf=dataiku.customrecipe.get_recipe_config()
+plugin_conf=get_recipe_config()
 
 # import variables
 # var_list=dataiku.get_custom_variables()
