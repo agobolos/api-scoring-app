@@ -25,6 +25,26 @@
     "paramsPythonSetup": "get_available_images.py",
     "params": [
         {
+            "type": "STRING",
+            "name": "api_address",
+            "label": "Address of API Node",
+            "mandatory": true,
+            "description": "e.g. https://localhost:21000"
+        },
+        {
+            "type": "STRING",
+            "name": "api_service",
+            "label": "API Service",
+            "description": "e.g. CLV_Project",
+            "mandatory": true
+        },
+        {
+            "type": "STRING",
+            "name": "api_enpoint",
+            "label": "Endpoint on API service",
+            "mandatory": true
+        },
+        {
             "name": "input_dataset",
             "type": "DATASET",
             "label": "Dataset",
