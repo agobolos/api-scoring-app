@@ -8,7 +8,8 @@ def do(payload, config, plugin_config, inputs):
   choices={}
     
   for img in img_list:
-    choices[img]=img
+    choices["value"]=img
+    choices["label"]=img.split('.')[0]
   
   print(str(choices))
   return {"choices": choices}
