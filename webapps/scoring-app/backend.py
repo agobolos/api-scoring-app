@@ -67,7 +67,7 @@ max_slider=get_plugin_config()['max_slider']
 
 api_node=get_plugin_config()['api_address']
 api_project=get_plugin_config()['api_service']
-model_endpoint=get_plugin_config()['api_endpoint]
+model_endpoint=get_plugin_config()['api_endpoint']
 
 # client = dataikuapi.APINodeClient("http://localhost:20300", "CLV_Project")
 
