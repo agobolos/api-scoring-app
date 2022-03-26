@@ -40,7 +40,7 @@
         },
         {
             "type": "STRING",
-            "name": "api_enpoint",
+            "name": "api_endpoint",
             "label": "Endpoint on API service",
             "mandatory": true
         },
