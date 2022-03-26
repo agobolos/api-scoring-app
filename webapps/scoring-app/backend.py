@@ -51,7 +51,7 @@ text_on_button="Predict!"
 
 # import variables
 # var_list=dataiku.get_custom_variables()
-keep_fields=plugin_conf["included_columns"]
+keep_fields=get_recipe_config()["included_columns"]
 
 header_img=get_recipe_config()["header_img"]
 right_img=get_recipe_config()["right_image"]
