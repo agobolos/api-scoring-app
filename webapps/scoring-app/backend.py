@@ -78,7 +78,7 @@ client = dataikuapi.APINodeClient("http://localhost:20300", "CLV_Project")
 # print(test)
 
 # import dataset
-dataset=dataiku.Dataset(get_plugin_config['input_dataset'])
+dataset=dataiku.Dataset(sample_data)
 df=dataset.get_dataframe()
 
 df=df.keep(columns=keep_fields)
