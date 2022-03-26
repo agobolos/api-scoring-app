@@ -11,7 +11,7 @@ def do(payload, config, plugin_config, inputs):
     new_val={}
     new_val["value"]=img
     new_val["label"]=img.split('.')[0]
-    choices.add(new_val)
+    choices.append(new_val)
   
   print(str(choices))
   return {"choices": choices}
