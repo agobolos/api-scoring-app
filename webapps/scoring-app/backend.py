@@ -26,32 +26,40 @@ import os
 #-------------------------------------------------------------------------------------
 #sample_data="customer_data_clean_copy"
 
-drop_fields=['customer_id','ip','ip_geopoint']
+# keep_fields=['customer_id','ip','ip_geopoint']
 
-header_img="https://www.dataiku.com/wp-content/uploads/2021/02/Dataiku-new-logo-teal.svg"
-right_img="/local/static/images/webapps/How-to-make-Customer-value-proposition.jpeg"
+# header_img="https://www.dataiku.com/wp-content/uploads/2021/02/Dataiku-new-logo-teal.svg"
+# right_img="/local/static/images/webapps/How-to-make-Customer-value-proposition.jpeg"
 
 #client = dataikuapi.APINodeClient("http://localhost:20300", "CLV_Project")
 #model_endpoint="High_Revenue_Customers"
 
 text_on_button="Predict!"
-pred_false_pic='/local/static/images/webapps/Rejected-Stamp-PNG-Clipart.png'
-pred_true_pic='/local/static/images/webapps/approved-icon.png'
+# pred_false_pic='/local/static/images/webapps/Rejected-Stamp-PNG-Clipart.png'
+# pred_true_pic='/local/static/images/webapps/approved-icon.png'
 
 #--------------------------------------------------------------------------------------
 
-max_categories=150
-max_slider=100
+# max_categories=150
+# max_slider=100
 
 #--------------------------------------------------------------------------------------
+
+# import plugin config
+plugin_conf=dataiku.customrecipe.get_plugin_config()
 
 # import variables
-var_list=dataiku.get_custom_variables()
+# var_list=dataiku.get_custom_variables()
 
-sample_data=var_list["target_dataset_name"]
-api_node=var_list["api_node_address"]
-api_project=var_list["api_project"]
-model_endpoint=var_list["api_model_endpoint"]
+# sample_data=var_list["target_dataset_name"]
+# api_node=var_list["api_node_address"]
+# api_project=var_list["api_project"]
+# model_endpoint=var_list["api_model_endpoint"]
+
+sample_data=plugin_conf["target_dataset_name"]
+api_node=plugin_conf["api_node_address"]
+api_project=plugin_conf["api_project"]
+model_endpoint=plugin_conf["api_model_endpoint"]
 
 client = dataikuapi.APINodeClient("http://localhost:20300", "CLV_Project")
 
