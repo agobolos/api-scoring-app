@@ -26,7 +26,7 @@ import os
 
 
 #-------------------------------------------------------------------------------------
-#sample_data="customer_data_clean_copy"
+sample_data="customer_data_clean_copy"
 
 keep_fields=['customer_id','ip','ip_geopoint']
 
