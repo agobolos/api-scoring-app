@@ -51,7 +51,7 @@ max_slider=100
 
 # import variables
 # var_list=dataiku.get_custom_variables()
-test_fields=get_recipe_config()
+test_fields=get_recipe_config()['max_slider']
 
 #header_img=get_plugin_config()['header_img']
 #right_img=get_plugin_config()['right_image']
