@@ -51,7 +51,7 @@ max_slider=100
 
 # import variables
 # var_list=dataiku.get_custom_variables()
-# keep_fields=get_plugin_config()['included_columns']
+keep_fields=get_plugin_config()['included_columns']
 
 #header_img=get_plugin_config()['header_img']
 #right_img=get_plugin_config()['right_image']
