@@ -28,7 +28,7 @@ import os
 #-------------------------------------------------------------------------------------
 #sample_data="customer_data_clean_copy"
 
-# keep_fields=['customer_id','ip','ip_geopoint']
+keep_fields=['customer_id','ip','ip_geopoint']
 
 header_img="https://www.dataiku.com/wp-content/uploads/2021/02/Dataiku-new-logo-teal.svg"
 right_img="/local/static/images/webapps/How-to-make-Customer-value-proposition.jpeg"
@@ -51,7 +51,7 @@ max_slider=100
 
 # import variables
 # var_list=dataiku.get_custom_variables()
-keep_fields=get_plugin_config()['included_columns']
+# keep_fields=get_plugin_config()['included_columns']
 
 #header_img=get_plugin_config()['header_img']
 #right_img=get_plugin_config()['right_image']
