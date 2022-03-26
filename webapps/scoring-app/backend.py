@@ -50,28 +50,34 @@ plugin_conf=dataiku.customrecipe.get_plugin_config()
 
 # import variables
 # var_list=dataiku.get_custom_variables()
+keep_fields=plugin_conf["included_columns"]
 
-# sample_data=var_list["target_dataset_name"]
+header_img=plugin_conf["header_img"]
+right_img=plugin_conf["right_image"]
+pred_true_pic=plugin_conf["true_image"]
+pred_false_pic=plugin_conf["false_image"]
+
 # api_node=var_list["api_node_address"]
 # api_project=var_list["api_project"]
 # model_endpoint=var_list["api_model_endpoint"]
 
-sample_data=plugin_conf["target_dataset_name"]
-api_node=plugin_conf["api_node_address"]
-api_project=plugin_conf["api_project"]
-model_endpoint=plugin_conf["api_model_endpoint"]
+api_node=plugin_conf["api_address"]
+api_project=plugin_conf["api_service"]
+model_endpoint=plugin_conf["api_endpoint"]
 
-client = dataikuapi.APINodeClient("http://localhost:20300", "CLV_Project")
+# client = dataikuapi.APINodeClient("http://localhost:20300", "CLV_Project")
+
+client=dataikuapi.APINodeClient(api_address,api_service)
 
 # path=str(dataiku.get_custom_variables()["dip.home"])+"/local/static/images/webapps"
 # test=os.listdir(path) # returns list
 # print(test)
 
 # import dataset
-dataset=dataiku.Dataset(sample_data)
+dataset=dataiku.Dataset(plugin_conf["input_dataset"])
 df=dataset.get_dataframe()
 
-df=df.drop(columns=drop_fields)
+df=df.keep(columns=keep_fields)
 
 fields=dict(df.dtypes)
 print(str(fields))
