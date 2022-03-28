@@ -129,7 +129,7 @@ app.layout = html.Div([
                     # Create the input style
                     generate_input(key) for key in fields
                 ])
-            ], width=8),
+            ], width=6),
             dbc.Col([
                 html.Div(html.Img(src=right_img, style={'height':'250px'}), style=pic_style),
                 html.Br(),
