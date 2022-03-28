@@ -23,7 +23,7 @@ import numpy as np
 
 # import configuration
 webapp_config=get_webapp_config()
-webapp_config = { k:v.strip() for k, v in webapp_config.items()}
+webapp_config = { k:v.strip() for k, v in webapp_config.items() if isinstance(v, str)}
 print("Found configuration: " + str(webapp_config))
 
 # Import pictures and prepend location
