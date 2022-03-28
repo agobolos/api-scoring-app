@@ -133,7 +133,7 @@ app.layout = html.Div([
             dbc.Col([
                 html.Div(html.Img(src=right_img, style={'height':'250px'}), style=pic_style),
                 html.Br(),
-                html.Div(html.Button(text_on_button, id='btn-nclicks-1', n_clicks=0), style={'textAlign':'center','verticalAlign': 'center'}),
+                html.Div(html.Button(text_on_button, id='btn-nclicks-1', n_clicks=0), style={'textAlign':'center','verticalAlign': 'center','horizontalAlign':'center'}),
                 html.Br(),
                 html.Div(id="prediction"),
                 html.Div(dcc.Loading(id="loading-img", children=[html.Img(id='pred-pic', style={'height':'100px'})], type='circle'), style=pic_style)
