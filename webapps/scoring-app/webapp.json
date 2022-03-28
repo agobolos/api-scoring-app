@@ -34,21 +34,6 @@
         },
         {
             "type": "API_SERVICE",
-            "name": "api_test",
-            "label": "Address of API Node",
-            "mandatory": true,
-            "description": "Can be found in sample python code on Deployer, e.g. https://localhost:21000"
-        },
-        {
-            "type": "API_SERVICE_VERSION",
-            "name": "api_servtest",
-            "label": "vers of API Node",
-            "mandatory": true,
-            "apiServiceParamName":"api_test",
-            "description": "Can be found in sample python code on Deployer, e.g. https://localhost:21000"
-        },
-        {
-            "type": "STRING",
             "name": "api_service",
             "label": "API Service",
             "description": "e.g. CLV_Project",
