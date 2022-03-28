@@ -34,7 +34,7 @@ print(str(webapp_config))
 
 # Import pictures
 for image in ['header','right','true','false']:
-    exec(image+'img'=webapp_config[str(image)+'image'])
+    exec(image+'img')=webapp_config[str(image)+'image']
     print(webapp_config[str(image)+'image'])
 
 header_img=webapp_config['header_img']
