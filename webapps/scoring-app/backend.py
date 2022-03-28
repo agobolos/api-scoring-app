@@ -110,10 +110,10 @@ def generate_input(key):
                     'margin-right': '10px'}), style=tool_style)]
             
         else:
-            print(key)
             my_div=my_div+[dbc.Input(id=key, type=type, debounce=True, placeholder=key.title().replace('_',' '), style=tool_style)]
 
     except:
+        print(key)
         my_div=my_div+[dbc.Input(id=key, type=type, debounce=True, placeholder=key.title().replace('_',' '), style=tool_style)]
 
     return dbc.Row(my_div)
