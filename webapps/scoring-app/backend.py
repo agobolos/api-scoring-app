@@ -117,7 +117,7 @@ def generate_input(key):
             my_div=my_div+[dbc.Input(id=key, type=type, debounce=True, placeholder=key.title().replace('_',' '), style=tool_style)]
 
     except Exception as e:
-        print(key + " " + str(e))
+        print("Exception: " + key + " " + str(e))
         my_div=my_div+[dbc.Input(id=key, type=type, debounce=True, placeholder=key.title().replace('_',' '), style=tool_style)]
 
     return dbc.Row(my_div)
