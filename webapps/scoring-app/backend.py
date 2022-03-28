@@ -99,10 +99,10 @@ def generate_input(key):
             my_list=sorted(list(df[key].unique()))
             print(key + " has variables: " + str(my_list))
 
-            if len(my_list) <= max_categories:
+           # if len(my_list) <= max_categories:
                 my_div=my_div+[html.Div(dcc.Dropdown(id=key, options=my_list, value=my_list[0], placeholder=key.title().replace('_',' ')), style=tool_style)]
-            else:
-                my_div=my_div+[dbc.Input(id=key, type=type, debounce=True, placeholder=key.title().replace('_',' '), style=tool_style)]
+           # else:
+           #     my_div=my_div+[dbc.Input(id=key, type=type, debounce=True, placeholder=key.title().replace('_',' '), style=tool_style)]
                 
         elif type=="bool":
             my_div=my_div+[html.Div(dcc.RadioItems(id=key, options=[{'label':'True ','value':True }, {'label':'False ','value':False}], value='False', inline=True, labelStyle={
