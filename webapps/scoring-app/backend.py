@@ -54,7 +54,7 @@ for key in fields.keys():
     else:
         fields[key]='text'    
         
-# print(str(fields))
+print(str(fields))
 
 app.config.external_stylesheets = [dbc.themes.BOOTSTRAP]
 
