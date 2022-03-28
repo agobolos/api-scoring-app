@@ -96,8 +96,7 @@ def generate_input(key):
 
 
         elif type=="text":
-            print("test " + str(list(df[key].unique())))
-            my_list=sorted(list(df[key].unique()))
+            my_list=sorted(list(df[key].dropna().unique()))
             print(key + " has variables: " + str(my_list))
 
             if len(my_list) <= max_categories:
