@@ -92,8 +92,10 @@ def generate_input(key):
             my_max=df_temp.max()
 
             if len(df_temp) <=10:
-                marks=
-                my_div=my_div+[html.Div(dcc.Slider(id=key, min=my_min, max=my_max, step=1, value=my_min, marks=None, tooltip={"placement": "bottom", "always_visible": True}), style=tool_style)]
+                marks={}
+                for i in df_temp: 
+                    marks[i]=i
+                my_div=my_div+[html.Div(dcc.Slider(id=key, min=my_min, max=my_max, step=1, value=my_min, marks=marks, tooltip={"placement": "bottom", "always_visible": True}), style=tool_style)]
 
             elif my_max-my_min <=max_slider:
                 my_div=my_div+[html.Div(dcc.Slider(id=key, min=my_min, max=my_max, step=1, value=my_min, marks=None, tooltip={"placement": "bottom", "always_visible": True}), style=tool_style)]
