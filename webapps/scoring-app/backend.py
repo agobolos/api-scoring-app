@@ -96,6 +96,7 @@ def generate_input(key):
 
 
         elif type=="text":
+            print("123")
             my_list=sorted(list(df[key].unique()))
             print(key + " has variables: " + str(my_list))
 
