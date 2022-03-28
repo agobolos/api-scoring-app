@@ -11,7 +11,7 @@
         "label": "API Scoring Webapp",
 
         // description: longer string to help end users understand what this plugin does
-        "description": "Creates a webapp with a user interface for prediction using a model API",
+        "description": "Creates webapps with a user interface for prediction using a model API",
 
         "author": "agobolos",
 
