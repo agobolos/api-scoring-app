@@ -106,9 +106,9 @@ def generate_input(key):
         elif type=="text":
             my_list=sorted(df_temp)
             if len(df_temp) <= max_categories:
-                my_div=my_div+[html.Div(dcc.Dropdown(id=key, options=my_list, value=my_list[0], placeholder=key.title().replace('_',' ')), style=tool_style)]
+                my_div=my_div+[html.Div(dcc.Dropdown(id=key, options=my_list, value=my_list[0], placeholder="Please select a value"), style=tool_style)]
             else:
-                my_div=my_div+[dbc.Input(id=key, type=type, debounce=True, placeholder=key.title().replace('_',' '), style=tool_style)]
+                my_div=my_div+[dbc.Input(id=key, type=type, debounce=True, placeholder="Please enter a value", style=tool_style)]
                 
         elif type=="bool":
             my_div=my_div+[html.Div(dcc.RadioItems(id=key, options=[{'label':'True ','value':True }, {'label':'False ','value':False}], value='False', inline=True, labelStyle={
