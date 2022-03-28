@@ -49,6 +49,7 @@ text_on_button="Predict!"
 
 # import variables
 webapp_config=get_webapp_config()
+print(str(webapp_config))
 
 # Import pictures
 header_img=webapp_config['header_img']
