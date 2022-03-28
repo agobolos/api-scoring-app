@@ -74,7 +74,7 @@ client=dataikuapi.APINodeClient(webapp_config['api_address'],webapp_config['api_
 dataset=dataiku.Dataset(webapp_config['input_dataset'])
 df=dataset.get_dataframe()
 
-df=df.drop(columns=webapp_config['excluded_columns'])
+df=df.drop(columns=filter(None,webapp_config['excluded_columns']))
 
 fields=dict(df.dtypes)
 print(str(fields))
