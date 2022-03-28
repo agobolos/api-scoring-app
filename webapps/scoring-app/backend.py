@@ -5,17 +5,14 @@ from dataiku.customwebapp import *
 # input_dataset = get_webapp_config()["input_dataset"]
 
 import dash
-import dash_table
 import dash_bootstrap_components as dbc
 
 from dash import dcc
 from dash import html
-
-from dataiku.customrecipe import *
-
 from dash.dependencies import Input, Output, State
 from dash.exceptions import PreventUpdate
 
+from dataiku.customrecipe import *
 import dataikuapi
 import dataiku
 
@@ -28,7 +25,7 @@ text_on_button="Predict!"
 
 #--------------------------------------------------------------------------------------
 
-# import variables
+# import configuration
 webapp_config=get_webapp_config()
 print(str(webapp_config))
 
