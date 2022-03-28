@@ -6,7 +6,7 @@
         // description: longer string to help end users understand what this webapp does
         "description": "",
         // icon: must be one of the FontAwesome 3.2.1 icons, complete list here at https://fontawesome.com/v3.2.1/icons/
-        "icon": "icon-puzzle-piece"
+        "icon": "icon-bullseye"
     },
 
     "baseType": "DASH", // WARNING: do not change
