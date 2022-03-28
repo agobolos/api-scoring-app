@@ -119,7 +119,7 @@ def generate_input(key):
 
 
 app.layout = html.Div([
-        dbc.Row(html.Div(html.Img(style={'height':'100px', 'horizontalAlign'='middle'}, src=header_img))),
+        dbc.Row(html.Div(html.Img(style={'height':'100px', 'horizontalAlign':'middle'}, src=header_img))),
         html.Br(),
     
         dbc.Row([
