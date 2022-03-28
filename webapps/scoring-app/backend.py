@@ -32,14 +32,10 @@ text_on_button="Predict!"
 webapp_config=get_webapp_config()
 print(str(webapp_config))
 
-# Import pictures
+# Import pictures and prepend location
 for image in ['header','right','true','false']:
     locals()[image+'_img']='/local/static/images/webapps/'+webapp_config[str(image)+'_image']
 
-# header_img=webapp_config['header_img']
-# right_img=webapp_config['right_image']
-# pred_true_pic=webapp_config['true_image']
-# pred_false_pic=webapp_config['false_image']
 
 max_categories=webapp_config['max_categories']
 max_slider=webapp_config['max_slider']
@@ -180,9 +176,9 @@ def cb_render(btn1,*vals):
 
     time.sleep(1)
     if prediction["result"]["prediction"].lower()=="false":
-        my_image=pred_false_pic
+        my_image=false_pic
     else:    
-        my_image=pred_true_pic
+        my_image=true_pic
     return my_image
     
 
