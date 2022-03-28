@@ -56,7 +56,7 @@
             "type": "DATASET_COLUMNS",
             //"columnRole": "input_dataset",
             "datasetParamName": "input_dataset",
-            "label": "Columns",
+            "label": "Columns to Exclude",
             "description": "Select columns to exclude",
             "mandatory": true
         },
