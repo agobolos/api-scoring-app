@@ -83,25 +83,27 @@ pic_style={
 def generate_input(key):
     type=fields[key]
     
-    df_temp=df[key].dropna().unique()
+    df_temp=sorted(df[key].dropna().unique())
 
     my_div=[html.P('{}:'.format(key.title().replace('_',' ')), style=text_style)]
     try:
         if type=="number":
             my_min=df_temp.min()
-            my_max=df[key].max()
+            my_max=df_temp.max()
 
-            if my_max-my_min <=max_slider:
+            if len(df_temp) <=10:
+                marks=
+                my_div=my_div+[html.Div(dcc.Slider(id=key, min=my_min, max=my_max, step=1, value=my_min, marks=None, tooltip={"placement": "bottom", "always_visible": True}), style=tool_style)]
+
+            elif my_max-my_min <=max_slider:
                 my_div=my_div+[html.Div(dcc.Slider(id=key, min=my_min, max=my_max, step=1, value=my_min, marks=None, tooltip={"placement": "bottom", "always_visible": True}), style=tool_style)]
             else:
                 my_div=my_div+[dbc.Input(id=key, type=type, debounce=True, placeholder=key.title().replace('_',' '), style=tool_style)]
 
 
         elif type=="text":
-            my_list=sorted(df_temp)
-            print(key + " has variables: " + str(my_list))
 
-            if len(my_list) <= max_categories:
+            if len(df_temp) <= max_categories:
                 my_div=my_div+[html.Div(dcc.Dropdown(id=key, options=my_list, value=my_list[0], placeholder=key.title().replace('_',' ')), style=tool_style)]
             else:
                 my_div=my_div+[dbc.Input(id=key, type=type, debounce=True, placeholder=key.title().replace('_',' '), style=tool_style)]
