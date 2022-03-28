@@ -29,7 +29,7 @@
             "name": "api_address",
             "label": "Address of API Node",
             "mandatory": true,
-            "description": "e.g. https://localhost:21000"
+            "description": "Can be found in sample python code on Deployer, e.g. https://localhost:21000"
         },
         {
             "type": "STRING",
@@ -48,7 +48,7 @@
             "name": "input_dataset",
             "type": "DATASET",
             "label": "Dataset",
-            "description": "Dataset for variable information",
+            "description": "Dataset for variable list, types, and ranges",
             "mandatory": true
         },
         {
@@ -64,25 +64,29 @@
             "name": "header_image",
             "type": "SELECT",
             "label": "Header Image",
-            "getChoicesFromPython": true
+            "getChoicesFromPython": true,
+            "description":"Select images from 'Global Shared Code > Static Web Resources > /images/webapps'"
         },
         {
             "name": "right_image",
             "type": "SELECT",
             "label": "Right Image",
-            "getChoicesFromPython": true
+            "getChoicesFromPython": true,
+            "description": "Image on the right column"
         },
         {
             "name": "true_image",
             "type": "SELECT",
             "label": "True Image",
-            "getChoicesFromPython": true
+            "getChoicesFromPython": true,
+            "description": "Image if decision is True"
         },
         {
             "name": "false_image",
             "type": "SELECT",
             "label": "False Image",
-            "getChoicesFromPython": true
+            "getChoicesFromPython": true,
+            "description": "Image if decision is False"
         },
         {
             "name": "max_categories",
