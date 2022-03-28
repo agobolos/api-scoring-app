@@ -23,6 +23,7 @@ import numpy as np
 
 # import configuration
 webapp_config=get_webapp_config()
+webapp_config = { k:v.strip() for k, v in webapp_config.items()}
 print("Found configuration: " + str(webapp_config))
 
 # Import pictures and prepend location
@@ -34,8 +35,8 @@ max_slider=webapp_config['max_slider']
 text_on_button="Predict!"
 
 # Configure API connection
-model_endpoint=webapp_config['api_endpoint'].strip()
-client=dataikuapi.APINodeClient(webapp_config['api_address'].strip(),webapp_config['api_service'].strip())
+model_endpoint=webapp_config['api_endpoint']
+client=dataikuapi.APINodeClient(webapp_config['api_address'],webapp_config['api_service'])
 
 # import dataset
 dataset=dataiku.Dataset(webapp_config['input_dataset'])
