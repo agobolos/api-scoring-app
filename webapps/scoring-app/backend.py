@@ -34,8 +34,8 @@ max_slider=webapp_config['max_slider']
 text_on_button="Predict!"
 
 # Configure API connection
-model_endpoint=webapp_config['api_endpoint']
-client=dataikuapi.APINodeClient(webapp_config['api_address'],webapp_config['api_service'])
+model_endpoint=webapp_config['api_endpoint'].strip()
+client=dataikuapi.APINodeClient(webapp_config['api_address'].strip(),webapp_config['api_service'].strip())
 
 # import dataset
 dataset=dataiku.Dataset(webapp_config['input_dataset'])
