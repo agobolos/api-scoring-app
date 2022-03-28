@@ -88,7 +88,7 @@ def generate_input(key):
         if type=="number":
             my_min=df[key].min()
             my_max=df[key].max()
-
+            print(key + " " + my_min)
             if my_max-my_min <=max_slider:
                 my_div=my_div+[html.Div(dcc.Slider(id=key, min=my_min, max=my_max, step=1, value=my_min, marks=None, tooltip={"placement": "bottom", "always_visible": True}), style=tool_style)]
             else:
