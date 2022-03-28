@@ -163,9 +163,9 @@ def cb_render(btn1,*vals):
 
     time.sleep(1)
     if prediction["result"]["prediction"].lower()=="false":
-        my_image=false_pic
+        my_image=false_img
     else:    
-        my_image=true_pic
+        my_image=true_img
     return my_image
     
 
