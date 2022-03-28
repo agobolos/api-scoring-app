@@ -59,13 +59,11 @@ pred_false_pic=webapp_config['false_image']
 max_categories=webapp_config['max_categories']
 max_slider=webapp_config['max_slider']
 
-api_address=webapp_config['api_address']
-api_service=webapp_config['api_service']
 model_endpoint=webapp_config['api_endpoint']
 
 # client = dataikuapi.APINodeClient("http://localhost:20300", "CLV_Project")
 
-client=dataikuapi.APINodeClient(api_address,api_service)
+client=dataikuapi.APINodeClient(webapp_config['api_address'],webapp_config['api_service'])
 
 # path=str(dataiku.get_custom_variables()["dip.home"])+"/local/static/images/webapps"
 # test=os.listdir(path) # returns list
