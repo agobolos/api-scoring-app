@@ -124,6 +124,7 @@ app.layout = html.Div([
         dbc.Row([
             dbc.Col([
                 html.Div([
+                    # Create the input style
                     generate_input(key) for key in fields
                 ])
             ]),
