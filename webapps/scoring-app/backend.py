@@ -24,26 +24,7 @@ import numpy as np
 
 import os
 
-
-#-------------------------------------------------------------------------------------
-# sample_data="customer_data_clean_copy"
-
-# keep_fields=['customer_id','ip','ip_geopoint']
-
-# header_img="https://www.dataiku.com/wp-content/uploads/2021/02/Dataiku-new-logo-teal.svg"
-# right_img="/local/static/images/webapps/How-to-make-Customer-value-proposition.jpeg"
-
-#client = dataikuapi.APINodeClient("http://localhost:20300", "CLV_Project")
-#model_endpoint="High_Revenue_Customers"
-
 text_on_button="Predict!"
-# pred_false_pic='/local/static/images/webapps/Rejected-Stamp-PNG-Clipart.png'
-# pred_true_pic='/local/static/images/webapps/approved-icon.png'
-
-#--------------------------------------------------------------------------------------
-
-# max_categories=150
-# max_slider=100
 
 #--------------------------------------------------------------------------------------
 
@@ -60,15 +41,9 @@ pred_false_pic=webapp_config['false_image']
 max_categories=webapp_config['max_categories']
 max_slider=webapp_config['max_slider']
 
+# Configure API connection
 model_endpoint=webapp_config['api_endpoint']
-
-# client = dataikuapi.APINodeClient("http://localhost:20300", "CLV_Project")
-
 client=dataikuapi.APINodeClient(webapp_config['api_address'],webapp_config['api_service'])
-
-# path=str(dataiku.get_custom_variables()["dip.home"])+"/local/static/images/webapps"
-# test=os.listdir(path) # returns list
-# print(test)
 
 # import dataset
 dataset=dataiku.Dataset(webapp_config['input_dataset'])
