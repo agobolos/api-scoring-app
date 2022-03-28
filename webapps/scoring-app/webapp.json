@@ -63,7 +63,7 @@
         {
             "name": "header_img",
             "type": "SELECT",
-            "label": "Banner Image",
+            "label": "Header Image",
             "getChoicesFromPython": true
         },
         {
