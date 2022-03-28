@@ -61,7 +61,7 @@
             "mandatory": true
         },
         {
-            "name": "header_img",
+            "name": "header_image",
             "type": "SELECT",
             "label": "Header Image",
             "getChoicesFromPython": true
