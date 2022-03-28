@@ -123,15 +123,8 @@ app.layout = html.Div([
     
         dbc.Row([
             dbc.Col([
-#                 dcc.Checklist(
-#                     id="campaign_old",
-#                     options=[
-#                        {'label': 'Campaign', 'value': 'True'}
-#                     ]
-#                 ),
-
                 html.Div([
-                 generate_input(key) for key in fields
+                    generate_input(key) for key in fields
                 ])
             ]),
             dbc.Col([
