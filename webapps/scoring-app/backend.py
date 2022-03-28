@@ -83,7 +83,7 @@ pic_style={
 def generate_input(key):
     type=fields[key]
     
-    df_temp=sorted(df[key].dropna().unique())
+    df_temp=df[key].dropna().unique()
 
     my_div=[html.P('{}:'.format(key.title().replace('_',' ')), style=text_style)]
     try:
@@ -104,9 +104,9 @@ def generate_input(key):
 
 
         elif type=="text":
-
+            my_list=sorted(df_temp)
             if len(df_temp) <= max_categories:
-                my_div=my_div+[html.Div(dcc.Dropdown(id=key, options=df_temp, value=df_temp[0], placeholder=key.title().replace('_',' ')), style=tool_style)]
+                my_div=my_div+[html.Div(dcc.Dropdown(id=key, options=my_list, value=my_list[0], placeholder=key.title().replace('_',' ')), style=tool_style)]
             else:
                 my_div=my_div+[dbc.Input(id=key, type=type, debounce=True, placeholder=key.title().replace('_',' '), style=tool_style)]
                 
