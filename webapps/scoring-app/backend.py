@@ -106,7 +106,7 @@ def generate_input(key):
         elif type=="text":
 
             if len(df_temp) <= max_categories:
-                my_div=my_div+[html.Div(dcc.Dropdown(id=key, options=my_list, value=my_list[0], placeholder=key.title().replace('_',' ')), style=tool_style)]
+                my_div=my_div+[html.Div(dcc.Dropdown(id=key, options=df_temp, value=df_temp[0], placeholder=key.title().replace('_',' ')), style=tool_style)]
             else:
                 my_div=my_div+[dbc.Input(id=key, type=type, debounce=True, placeholder=key.title().replace('_',' '), style=tool_style)]
                 
