@@ -89,7 +89,7 @@ def generate_input(key):
             my_min=df[key].min()
             my_max=df[key].max()
 
-            if my_max-my_min <=max_slider:
+            if my_max-my_min <=int(max_slider):
                 my_div=my_div+[html.Div(dcc.Slider(id=key, min=my_min, max=my_max, step=1, value=my_min, marks=None, tooltip={"placement": "bottom", "always_visible": True}), style=tool_style)]
             else:
                 my_div=my_div+[dbc.Input(id=key, type=type, debounce=True, placeholder=key.title().replace('_',' '), style=tool_style)]
@@ -99,7 +99,7 @@ def generate_input(key):
             my_list=sorted(list(df[key].unique()))
             print(key + " has variables: " + my_list)
 
-            if len(my_list) <=max_categories:
+            if len(my_list) <=int(max_categories):
                 my_div=my_div+[html.Div(dcc.Dropdown(id=key, options=my_list, value=my_list[0], placeholder=key.title().replace('_',' ')), style=tool_style)]
             else:
                 my_div=my_div+[dbc.Input(id=key, type=type, debounce=True, placeholder=key.title().replace('_',' '), style=tool_style)]
