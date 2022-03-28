@@ -1,4 +1,3 @@
-from dataiku.customwebapp import *
 
 # Access the parameters that end-users filled in using webapp config
 # For example, for a parameter called "input_dataset"
@@ -12,7 +11,7 @@ from dash import html
 from dash.dependencies import Input, Output, State
 from dash.exceptions import PreventUpdate
 
-from dataiku.customrecipe import *
+from dataiku.customwebapp import *
 import dataikuapi
 import dataiku
 
