@@ -100,7 +100,7 @@ def generate_input(key):
             elif my_max-my_min <=max_slider:
                 my_div=my_div+[html.Div(dcc.Slider(id=key, min=my_min, max=my_max, step=1, value=my_min, marks=None, tooltip={"placement": "bottom", "always_visible": True}), style=tool_style)]
             else:
-                my_div=my_div+[dbc.Input(id=key, type=type, debounce=True, placeholder="Please enter the amount", style=tool_style)]
+                my_div=my_div+[dbc.Input(id=key, type=type, debounce=True, placeholder="Please enter an amount", style=tool_style)]
 
 
         elif type=="text":
