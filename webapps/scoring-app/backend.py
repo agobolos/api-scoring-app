@@ -23,7 +23,7 @@ import numpy as np
 
 # import configuration
 webapp_config=get_webapp_config()
-print(str(webapp_config))
+print("Found configuration: " + str(webapp_config))
 
 # Import pictures and prepend location
 for image in ['header','right','true','false']:
