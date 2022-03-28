@@ -19,10 +19,6 @@ import dataiku
 import time
 import numpy as np
 
-import os
-
-text_on_button="Predict!"
-
 #--------------------------------------------------------------------------------------
 
 # import configuration
@@ -33,9 +29,9 @@ print(str(webapp_config))
 for image in ['header','right','true','false']:
     locals()[image+'_img']='/local/static/images/webapps/'+webapp_config[str(image)+'_image']
 
-
 max_categories=webapp_config['max_categories']
 max_slider=webapp_config['max_slider']
+text_on_button="Predict!"
 
 # Configure API connection
 model_endpoint=webapp_config['api_endpoint']
@@ -48,7 +44,6 @@ df=dataset.get_dataframe()
 df=df.drop(columns=filter(None,webapp_config['excluded_columns']))
 
 fields=dict(df.dtypes)
-print(str(fields))
 
 for key in fields.keys():
     if fields[key]==bool:
@@ -59,7 +54,7 @@ for key in fields.keys():
     else:
         fields[key]='text'    
         
-print(str(fields))
+# print(str(fields))
 
 app.config.external_stylesheets = [dbc.themes.BOOTSTRAP]
 
