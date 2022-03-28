@@ -34,13 +34,12 @@ print(str(webapp_config))
 
 # Import pictures
 for image in ['header','right','true','false']:
-    locals()[image+'img']=webapp_config[str(image)+'image']
-    print(webapp_config[str(image)+'image'])
+    locals()[image+'_img']='/local/static/images/webapps/'+webapp_config[str(image)+'_image']
 
-header_img=webapp_config['header_img']
-right_img=webapp_config['right_image']
-pred_true_pic=webapp_config['true_image']
-pred_false_pic=webapp_config['false_image']
+# header_img=webapp_config['header_img']
+# right_img=webapp_config['right_image']
+# pred_true_pic=webapp_config['true_image']
+# pred_false_pic=webapp_config['false_image']
 
 max_categories=webapp_config['max_categories']
 max_slider=webapp_config['max_slider']
