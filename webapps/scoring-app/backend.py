@@ -78,7 +78,7 @@ pic_style={
     'padding': 10,
     "verticalAlign":'middle',
     'horizontalAlign':'middle',
-    'testAlign': 'center'
+    'textAlign': 'center'
 }
 
 def generate_input(key):
