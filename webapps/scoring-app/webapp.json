@@ -33,7 +33,7 @@
             "description": "Can be found in sample python code on Deployer, e.g. https://localhost:21000"
         },
         {
-            "type": "API_SERVICE",
+            "type": "STRING",
             "name": "api_service",
             "label": "API Service",
             "description": "e.g. CLV_Project",
