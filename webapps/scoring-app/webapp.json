@@ -52,12 +52,12 @@
             "mandatory": true
         },
         {
-            "name": "included_columns",
+            "name": "excluded_columns",
             "type": "DATASET_COLUMNS",
             //"columnRole": "input_dataset",
             "datasetParamName": "input_dataset",
             "label": "Columns",
-            "description": "Select columns to use",
+            "description": "Select columns to exclude",
             "mandatory": true
         },
         {
