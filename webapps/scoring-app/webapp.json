@@ -24,7 +24,7 @@
     */
     "paramsPythonSetup": "get_available_images.py",
     "params": [
-/*        {
+        {
             "type": "STRING",
             "name": "api_address",
             "label": "Address of API Node",
@@ -44,7 +44,7 @@
             "label": "Endpoint on API service",
             "mandatory": true
         },
-*/        {
+        {
             "name": "input_dataset",
             "type": "DATASET",
             "label": "Dataset",
@@ -59,7 +59,7 @@
             "label": "Columns",
             "description": "Select columns to use",
             "mandatory": true
-        }/*,
+        },
         {
             "name": "header_img",
             "type": "SELECT",
@@ -99,7 +99,7 @@
             "description": "Maximum number of values for slider",
             "mandatory": true,
             "defaultValue": 100
-        }*/
+        }
 
     ],
 
