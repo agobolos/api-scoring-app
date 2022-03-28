@@ -33,6 +33,10 @@ webapp_config=get_webapp_config()
 print(str(webapp_config))
 
 # Import pictures
+for image in ['header','right','true','false']:
+    str(image+'img')=webapp_config[str(image)+'image']
+    print(webapp_config[str(image)+'image'])
+
 header_img=webapp_config['header_img']
 right_img=webapp_config['right_image']
 pred_true_pic=webapp_config['true_image']
