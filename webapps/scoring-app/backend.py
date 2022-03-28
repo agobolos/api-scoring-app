@@ -128,14 +128,14 @@ app.layout = html.Div([
                 html.Div([
                     # Create the input style
                     generate_input(key) for key in fields
-                ])
+                ]), style={'width':'60%'}
             ]),
             dbc.Col([
                 html.Div(html.Img(src=right_img, style={'height':'250px'}), style=pic_style),
                 html.Br(),
                 html.Div(html.Button(text_on_button, id='btn-nclicks-1', n_clicks=0), style={'horizonalAlign':'middle','verticalAlign': 'middle', 'display': 'inline'}),
                 html.Br(),
-                html.Div(id="prediction"),
+                html.Div(id="prediction", style={'textAlign':'center'}),
                 html.Div(dcc.Loading(id="loading-img", children=[html.Img(id='pred-pic', style={'height':'100px'})], type='circle'), style=pic_style)
                 ]
             )
